@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+body {
+  @apply bg-cream font-sans text-ink antialiased overflow-x-clip;
+}
+::selection {
+  background: #c9456f;
+  color: #fff;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee, .animate-spinSlow, .animate-pulseRing { animation: none !important; }
+}
